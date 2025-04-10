@@ -40,7 +40,7 @@ This system is designed to be **plug-and-play**, making it easy to drop into any
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Auth
+   cd centralized-logging
    ```
 3. Create and activate a virtual environment:
    ```bash
@@ -51,10 +51,6 @@ This system is designed to be **plug-and-play**, making it easy to drop into any
    ```bash
    pip install -r requirements.txt
    ```
-5. Set up MongoDB:
-   - Install MongoDB and start the service.
-   - Configure the MongoDB URI in the `.env` file.
-
 ---
 
 ## Usage
