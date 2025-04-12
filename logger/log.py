@@ -27,8 +27,7 @@ def setup_logging():
         console_handler.setLevel(logging.INFO)
 
         # create a formatter
-        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-                                      datefmt="%Y-%m-%d %H:%M:%S")
+        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(pathname)s - %(filename)s - %(lineno)d -%(module)s" , datefmt="%Y-%m-%d %H:%M:%S")
         file_handler.setFormatter(formatter)
         console_handler.setFormatter(formatter)
 
@@ -50,5 +49,5 @@ def new_log(data: models.newlog):
         return{"message": "message logged", "status": status.HTTP_200_OK}
 
     elif data.log_type == "error":
-        logger.error(data.message)
+        logger.exception(data.message)
         return{"message": "message logged", "status": status.HTTP_200_OK}
