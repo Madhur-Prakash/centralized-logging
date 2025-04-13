@@ -43,7 +43,7 @@ def new_backend_log(request: Request, data: models.newlog):
 
 
     if incoming_header == "/api/backend/Auth":
-        logger = setup_logging("/root/logs/Backend/Auth", "auth.log","auth_log") # logger instance
+        logger = setup_logging("Backend/Auth", "auth.log","auth_log") # logger instance
         print("auth hit")
         if data.log_type == "info":
             print("INFO hit")
@@ -61,7 +61,7 @@ def new_backend_log(request: Request, data: models.newlog):
             return{"message": "message logged", "status": status.HTTP_200_OK}
 
     elif incoming_header == "/api/backend/Appointment":
-        logger = setup_logging("/root/logs/Backend/Appointment", "appointment.log","appointment_log") # logger instance
+        logger = setup_logging("Backend/Appointment", "appointment.log","appointment_log") # logger instance
         print("appointment hit")
         if data.log_type == "info":
             print("INFO hit")
@@ -79,7 +79,7 @@ def new_backend_log(request: Request, data: models.newlog):
             return{"message": "message logged", "status": status.HTTP_200_OK}
     
     elif incoming_header == "/api/backend/MedicalRecord":
-        logger = setup_logging("/root/logs/Backend/MedicalRecord", "medicalrecord.log","medicalrecord_log") # logger instance
+        logger = setup_logging("Backend/MedicalRecord", "medicalrecord.log","medicalrecord_log") # logger instance
         print("MedicalRecord hit")
         if data.log_type == "info":
             print("INFO hit")
@@ -97,7 +97,7 @@ def new_backend_log(request: Request, data: models.newlog):
             return{"message": "message logged", "status": status.HTTP_200_OK}
 
     elif incoming_header == "/api/backend/Message":
-        logger = setup_logging("/root/logs/Backend/Message", "message.log","message_log") # logger instance
+        logger = setup_logging("Backend/Message", "message.log","message_log") # logger instance
         print("Message hit")
         if data.log_type == "info":
             print("INFO hit")
@@ -115,7 +115,7 @@ def new_backend_log(request: Request, data: models.newlog):
             return{"message": "message logged", "status": status.HTTP_200_OK}
 
     elif incoming_header == "/api/backend/ContactUs":
-        logger = setup_logging("/root/logs/Backend/ContactUs", "contactus.log","contactus_log") # logger instance
+        logger = setup_logging("Backend/ContactUs", "contactus.log","contactus_log") # logger instance
         print("ContactUs hit")
         if data.log_type == "info":
             print("INFO hit")
