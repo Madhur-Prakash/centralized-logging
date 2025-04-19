@@ -36,7 +36,7 @@ This system is designed to be **plug-and-play**, making it easy to drop into any
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Madhur-Prakash/centralized-logging
+   https://github.com/Madhur-Prakash/centralized-logging.git
    ```
 2. Navigate to the project directory:
    ```bash
