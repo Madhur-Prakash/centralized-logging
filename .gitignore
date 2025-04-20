@@ -2,3 +2,4 @@ log_venv
 logs
 __pycache__
 Backend
+.vscode
