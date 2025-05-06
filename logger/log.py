@@ -133,6 +133,21 @@ def new_backend_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Connect":
+                logger = setup_logging("Backend/Connect", "connect.log","connect_log")
+                print("Connect hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
@@ -235,6 +250,21 @@ def new_app_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/app/Connect":
+                logger = setup_logging("/root/logs/App/Connect", "connect.log","connect_log")
+                print("Connect hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
 
     except Exception as e:
         formatted_error = traceback.format_exc()
@@ -338,6 +368,21 @@ def new_website_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/website/Connect":
+                logger = setup_logging("/root/logs/Website/Connect", "connect.log","connect_log")
+                print("Connect hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
             
     except Exception as e:
         formatted_error = traceback.format_exc()
