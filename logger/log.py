@@ -148,6 +148,21 @@ def new_backend_log(request: Request, data: models.newlog):
                     print("ERROR hit")
                     logger.error(data.message)
                     return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Profile":
+                logger = setup_logging("Backend/Profile", "profile.log","profile_log")
+                print("Profile hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
@@ -178,7 +193,6 @@ def new_app_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
-
         elif incoming_header == "/api/app/Appointment":
             logger = setup_logging("/root/logs/App/Appointment", "appointment.log","appointment_log") # logger instance
             print("appointment hit")
@@ -253,6 +267,21 @@ def new_app_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/app/Connect":
                 logger = setup_logging("/root/logs/App/Connect", "connect.log","connect_log")
                 print("Connect hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/app/Profile":
+                logger = setup_logging("/root/logs/App/Profile", "profile.log","profile_log")
+                print("Profile hit")
                 if data.log_type == "info":
                     print("INFO hit")
                     logger.info(data.message)
@@ -383,7 +412,21 @@ def new_website_log(request: Request, data: models.newlog):
                     print("ERROR hit")
                     logger.error(data.message)
                     return{"message": "message logged", "status": status.HTTP_200_OK}
-            
+        elif incoming_header == "/api/website/Profile":
+                logger = setup_logging("/root/logs/Website/Profile", "profile.log","profile_log")
+                print("Profile hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
