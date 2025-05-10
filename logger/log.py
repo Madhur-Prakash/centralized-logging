@@ -193,6 +193,21 @@ def new_backend_log(request: Request, data: models.newlog):
                     print("ERROR hit")
                     logger.error(data.message)
                     return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Search":
+                logger = setup_logging("Backend/Search", "search.log","search_log")
+                print("Search hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
@@ -342,6 +357,21 @@ def new_app_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/app/Doctor_public_profile":
                 logger = setup_logging("/root/logs/App/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
                 print("Doctor_public_profile hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/app/Search":
+                logger = setup_logging("/root/logs/App/Search", "search.log","search_log")
+                print("Search hit")
                 if data.log_type == "info":
                     print("INFO hit")
                     logger.info(data.message)
@@ -505,6 +535,21 @@ def new_website_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/website/Doctor_public_profile":
                 logger = setup_logging("/root/logs/Website/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
                 print("Doctor_public_profile hit")
+                if data.log_type == "info":
+                    print("INFO hit")
+                    logger.info(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "warning":
+                    print("WARNING hit")
+                    logger.warning(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+                if data.log_type == "error":
+                    print("ERROR hit")
+                    logger.error(data.message)
+                    return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/website/Search":
+                logger = setup_logging("/root/logs/Website/Search", "search.log","search_log")
+                print("Search hit")
                 if data.log_type == "info":
                     print("INFO hit")
                     logger.info(data.message)
