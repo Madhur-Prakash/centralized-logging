@@ -134,80 +134,96 @@ def new_backend_log(request: Request, data: models.newlog):
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/backend/Connect":
-                logger = setup_logging("Backend/Connect", "connect.log","connect_log")
-                print("Connect hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("Backend/Connect", "connect.log","connect_log")
+            print("Connect hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/backend/Profile":
-                logger = setup_logging("Backend/Profile", "profile.log","profile_log")
-                print("Profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("Backend/Profile", "profile.log","profile_log")
+            print("Profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/backend/Patient_public_profile":
-                logger = setup_logging("Backend/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
-                print("Patient_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("Backend/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
+            print("Patient_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/backend/Doctor_public_profile":
-                logger = setup_logging("Backend/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
-                print("Doctor_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("Backend/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
+            print("Doctor_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/backend/Search":
-                logger = setup_logging("Backend/Search", "search.log","search_log")
-                print("Search hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("Backend/Search", "search.log","search_log")
+            print("Search hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Report_problem":
+            logger = setup_logging("Backend/Report_problem", "report_problem.log","report_problem_log")
+            print("Report_problem hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
@@ -310,80 +326,95 @@ def new_app_log(request: Request, data: models.newlog):
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/app/Connect":
-                logger = setup_logging("/root/logs/App/Connect", "connect.log","connect_log")
-                print("Connect hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/App/Connect", "connect.log","connect_log")
+            print("Connect hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/app/Profile":
-                logger = setup_logging("/root/logs/App/Profile", "profile.log","profile_log")
-                print("Profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/App/Profile", "profile.log","profile_log")
+            print("Profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/app/Patient_public_profile":
-                logger = setup_logging("/root/logs/App/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
-                print("Patient_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/App/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
+            print("Patient_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/app/Doctor_public_profile":
-                logger = setup_logging("/root/logs/App/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
-                print("Doctor_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/App/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
+            print("Doctor_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/app/Report_problem":
+            logger = setup_logging("/root/logs/App/Report_problem", "report_problem.log","report_problem_log")
+            print("Report_problem hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/app/Search":
-                logger = setup_logging("/root/logs/App/Search", "search.log","search_log")
-                print("Search hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/App/Search", "search.log","search_log")
+            print("Search hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
 
     except Exception as e:
         formatted_error = traceback.format_exc()
@@ -488,80 +519,95 @@ def new_website_log(request: Request, data: models.newlog):
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/website/Connect":
-                logger = setup_logging("/root/logs/Website/Connect", "connect.log","connect_log")
-                print("Connect hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/Website/Connect", "connect.log","connect_log")
+            print("Connect hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/website/Profile":
-                logger = setup_logging("/root/logs/Website/Profile", "profile.log","profile_log")
-                print("Profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/Website/Profile", "profile.log","profile_log")
+            print("Profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/website/Patient_public_profile":
-                logger = setup_logging("/root/logs/Website/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
-                print("Patient_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/Website/Patient_public_profile", "patient_public_profile.log","patient_public_profile_log")
+            print("Patient_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/website/Doctor_public_profile":
-                logger = setup_logging("/root/logs/Website/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
-                print("Doctor_public_profile hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/Website/Doctor_public_profile", "doctor_public_profile.log","doctor_public_profile_log")
+            print("Doctor_public_profile hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
         elif incoming_header == "/api/website/Search":
-                logger = setup_logging("/root/logs/Website/Search", "search.log","search_log")
-                print("Search hit")
-                if data.log_type == "info":
-                    print("INFO hit")
-                    logger.info(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "warning":
-                    print("WARNING hit")
-                    logger.warning(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
-                if data.log_type == "error":
-                    print("ERROR hit")
-                    logger.error(data.message)
-                    return{"message": "message logged", "status": status.HTTP_200_OK}
+            logger = setup_logging("/root/logs/Website/Search", "search.log","search_log")
+            print("Search hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/website/Report_problem":
+            logger = setup_logging("/root/logs/Website/Report_problem", "report_problem.log","report_problem_log")
+            print("Report_problem hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
     except Exception as e:
         formatted_error = traceback.format_exc()
         print("Error creating log: ", formatted_error)
