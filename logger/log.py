@@ -223,6 +223,21 @@ def new_backend_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Img_to_json":
+            logger = setup_logging("Backend/Img_to_json", "img_to_json.log","img_to_json_log")
+            print("Img_to_json hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
             
     except Exception as e:
         formatted_error = traceback.format_exc()
@@ -403,6 +418,21 @@ def new_app_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/app/Search":
             logger = setup_logging("/root/logs/App/Search", "search.log","search_log")
             print("Search hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/app/Img_to_json":
+            logger = setup_logging("/root/logs/App/Img_to_json", "img_to_json.log","img_to_json_log")
+            print("Img_to_json hit")
             if data.log_type == "info":
                 print("INFO hit")
                 logger.info(data.message)
@@ -596,6 +626,21 @@ def new_website_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/website/Report_problem":
             logger = setup_logging("/root/logs/Website/Report_problem", "report_problem.log","report_problem_log")
             print("Report_problem hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/website/Img_to_json":
+            logger = setup_logging("/root/logs/Website/Img_to_json", "img_to_json.log","img_to_json_log")
+            print("Img_to_json hit")
             if data.log_type == "info":
                 print("INFO hit")
                 logger.info(data.message)
