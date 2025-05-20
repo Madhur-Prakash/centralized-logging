@@ -253,6 +253,21 @@ def new_backend_log(request: Request, data: models.newlog):
                 print("ERROR hit")
                 logger.error(data.message)
                 return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/backend/Timeline":
+            logger = setup_logging("Backend/Timeline", "timeline.log","timeline_log")
+            print("Timeline hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
             
     except Exception as e:
         formatted_error = traceback.format_exc()
@@ -464,6 +479,22 @@ def new_app_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/app/Pdf_to_json":
             logger = setup_logging("/root/logs/App/Pdf_to_json", "pdf_to_json.log","pdf_to_json_log")
             print("Pdf_to_json hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            
+        elif incoming_header == "/api/app/Timeline":
+            logger = setup_logging("/root/logs/App/Timeline", "timeline.log","timeline_log")
+            print("Timeline hit")
             if data.log_type == "info":
                 print("INFO hit")
                 logger.info(data.message)
@@ -688,6 +719,21 @@ def new_website_log(request: Request, data: models.newlog):
         elif incoming_header == "/api/website/Pdf_to_json":
             logger = setup_logging("/root/logs/Website/Pdf_to_json", "pdf_to_json.log","pdf_to_json_log")
             print("Pdf_to_json hit")
+            if data.log_type == "info":
+                print("INFO hit")
+                logger.info(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "warning":
+                print("WARNING hit")
+                logger.warning(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+            elif data.log_type == "error":
+                print("ERROR hit")
+                logger.error(data.message)
+                return{"message": "message logged", "status": status.HTTP_200_OK}
+        elif incoming_header == "/api/website/Timeline":
+            logger = setup_logging("/root/logs/Website/Timeline", "timeline.log","timeline_log")
+            print("Timeline hit")
             if data.log_type == "info":
                 print("INFO hit")
                 logger.info(data.message)
